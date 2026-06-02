@@ -9,15 +9,15 @@ source:
   - url: https://github.com/eclipse-cyclonedds/cyclonedds-python/archive/refs/tags/${{ version }}.zip
     sha256: a297a1e623ea8053d4991bf997222b5915e1ef6be79790549c3b1568310644f1
     patches:
-        - 0000_py_version_13.patch
+      - 0000_py_version_13.patch
 
 build:
-  number: 0
+  number: 1
   python:
     entry_points:
-        - ddsls = cyclonedds.tools.ddsls:command
-        - ddsls = cyclonedds.tools.pubsub:command
-        - cyclonedds = cyclonedds.tools.cli.main:cli
+      - ddsls = cyclonedds.tools.ddsls:command
+      - ddsls = cyclonedds.tools.pubsub:command
+      - cyclonedds = cyclonedds.tools.cli.main:cli
 
 
 requirements:
@@ -38,22 +38,22 @@ requirements:
 
 
 tests:
-    - script:
-        - cyclonedds --help
-    - python:
-        imports:
-            - cyclonedds
-        pip_check: true
+  - script:
+      - cyclonedds --help
+  - python:
+      imports:
+        - cyclonedds
+      pip_check: true
 
 
 about:
-    homepage: https://cyclonedds.io/docs/
-    documentation: https://cyclonedds.io/docs/cyclonedds-python/latest/
-    repository: https://github.com/eclipse-cyclonedds/cyclonedds-python
-    summary: Python binding for Eclipse Cyclone DDS
-    license: EPL-2.0
-    license_file: LICENSE
+  homepage: https://cyclonedds.io/docs/
+  documentation: https://cyclonedds.io/docs/cyclonedds-python/latest/
+  repository: https://github.com/eclipse-cyclonedds/cyclonedds-python
+  summary: Python binding for Eclipse Cyclone DDS
+  license: EPL-2.0
+  license_file: LICENSE
 
 extra:
-    recipe-maintainers:
-        - nmarticorena
+  recipe-maintainers:
+    - nmarticorena
