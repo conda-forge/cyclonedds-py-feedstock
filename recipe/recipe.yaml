@@ -12,7 +12,7 @@ source:
         - 0000_py_version_13.patch
 
 build:
-  number: 0
+  number: 1
   python:
     entry_points:
         - ddsls = cyclonedds.tools.ddsls:command
